@@ -1,6 +1,6 @@
 import { CALCULATOR_BUTTONS } from "~/constants/calculatorButtons";
 import type { CalculatorButton } from "~/types/calculator";
-
+import { keyMap } from "~/utils/calculatorHelpers";
 export function useCalculator() {
   const currentNumber = ref("");
   const previousNumber = ref("");
@@ -122,13 +122,6 @@ export function useCalculator() {
         break;
     }
   }
-
-  const keyMap: Record<string, string> = {
-    Enter: "=",
-    Escape: "C",
-    ",": ".",
-    Delete: "Backspace",
-  };
 
   function handleKey(event: KeyboardEvent) {
     const key = event.key;
