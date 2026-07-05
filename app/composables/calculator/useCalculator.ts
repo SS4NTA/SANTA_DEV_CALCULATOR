@@ -1,3 +1,4 @@
+import { CALCULATOR_BUTTONS } from "~/constants/calculatorButtons";
 import type { CalculatorButton } from "~/types/calculator";
 
 export function useCalculator() {
@@ -121,6 +122,37 @@ export function useCalculator() {
         break;
     }
   }
+
+  const keyMap: Record<string, string> = {
+    Enter: "=",
+    Escape: "C",
+    ",": ".",
+    Delete: "Backspace",
+  };
+
+  function handleKey(event: KeyboardEvent) {
+    const key = event.key;
+    const mappedKey = keyMap[key] || key;
+
+    const button = CALCULATOR_BUTTONS.find(
+      (element) =>
+        element.text === mappedKey ||
+        (element.action === "delete" && mappedKey === "Backspace"),
+    );
+
+    if (button) {
+      event.preventDefault();
+      handleButton(button);
+    }
+  }
+
+  onMounted(() => {
+    window.addEventListener("keydown", handleKey);
+  });
+
+  onUnmounted(() => {
+    window.removeEventListener("keydown", handleKey);
+  });
 
   const display = computed(() => {
     return previousNumber.value.length > 0

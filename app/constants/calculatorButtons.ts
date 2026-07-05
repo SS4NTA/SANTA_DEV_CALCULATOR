@@ -1,9 +1,9 @@
 import type { CalculatorButton } from "~/types/calculator";
 
 export const CALCULATOR_BUTTONS: CalculatorButton[] = [
-  { label: "%", color: "info", text: "%" },
   { label: "CE", color: "info", text: "CE" },
   { label: "C", color: "info", text: "C" },
+  { label: "%", color: "info", text: "%" },
   {
     label: "borrar último dígito",
     color: "info",
