@@ -1,0 +1,28 @@
+:root {
+  --bg-deep: #0a0a0f;
+  --bg-surface: #0d1117;
+  --neon-green: #00ff9f;
+  --neon-blue: #00d4ff;
+  --neon-magenta: #ff00ff;
+  --neon-yellow: #ffe600;
+  --text-main: #e0f7ff;
+  --font-display: "Share Tech Mono", monospace;
+  --font-ui: "Rajdhani", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-deep);
+  color: var(--text-main);
+  font-family: var(--font-ui);
+  font-size: 1.6rem;
+}

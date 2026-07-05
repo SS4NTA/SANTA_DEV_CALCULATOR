@@ -1,0 +1,30 @@
+import type { CalculatorButton } from "~/types/calculator";
+
+export const CALCULATOR_BUTTONS: CalculatorButton[] = [
+  { label: "%", color: "info", text: "%" },
+  { label: "CE", color: "info", text: "CE" },
+  { label: "C", color: "info", text: "C" },
+  {
+    label: "borrar último dígito",
+    color: "info",
+    icon: "mdi-backspace",
+    action: "delete",
+  },
+  { label: "7", color: "secondary", text: "7" },
+  { label: "8", color: "secondary", text: "8" },
+  { label: "9", color: "secondary", text: "9" },
+  { label: "/", color: "primary", text: "/" },
+  { label: "4", color: "secondary", text: "4" },
+  { label: "5", color: "secondary", text: "5" },
+  { label: "6", color: "secondary", text: "6" },
+  { label: "*", color: "primary", text: "*" },
+  { label: "1", color: "secondary", text: "1" },
+  { label: "2", color: "secondary", text: "2" },
+  { label: "3", color: "secondary", text: "3" },
+  { label: "-", color: "primary", text: "-" },
+  { label: ".", color: "secondary", text: "." },
+  { label: "0", color: "secondary", text: "0" },
+  { label: "+/-", color: "secondary", text: "+/-" },
+  { label: "+", color: "primary", text: "+" },
+  { label: "=", color: "success", text: "=" },
+];
